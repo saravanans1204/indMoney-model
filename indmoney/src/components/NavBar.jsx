@@ -8,7 +8,7 @@ import{faMagnifyingGlass,faCaretDown,faHeadset,faBarsStaggered,faXmark,faArrowRi
 const NavBar = () => {
 
     const [clicked,setClicked]=useState(false)
-
+    const [pressed,setPressed]=useState(false)
   
    const clickMenu=()=>{
     setClicked(!clicked)
@@ -17,8 +17,8 @@ const NavBar = () => {
    }
 
    const clickSearch=()=>{
-  
-    document.querySelector('.nav').classList.toggle('')
+    setPressed(!pressed)
+    
    }
 
 
@@ -29,7 +29,9 @@ const NavBar = () => {
         <img src={logo} width={'50px'}></img>
         {clicked?<h2 className='menu'>Menu</h2>  :"" }
         <nav className='nav'>
-            
+            {pressed?<div className='search-hidden'>
+                    ss
+            </div>:""}
             <aside className='nav-left'>
                 
            
@@ -80,7 +82,7 @@ const NavBar = () => {
             
         </nav>
             <div className='hidden-menu'>
-                    <FontAwesomeIcon className='hidden-search'  icon={faMagnifyingGlass}  />
+                    <FontAwesomeIcon className='hidden-search' onClick={clickSearch}  icon={faMagnifyingGlass}  />
                     <FontAwesomeIcon className='hidden-bar' onClick={clickMenu} icon={!clicked?faBarsStaggered:faXmark} />
             </div>
     </div>
