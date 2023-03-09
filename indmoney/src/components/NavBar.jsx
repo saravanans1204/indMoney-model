@@ -12,13 +12,13 @@ const NavBar = () => {
   
    const clickMenu=()=>{
     setClicked(!clicked)
-  
+    setPressed(false)
     document.querySelector('.nav').classList.toggle('hidden-active')
    }
 
    const clickSearch=()=>{
+    setClicked(false)
     setPressed(!pressed)
-    
    }
 
 
@@ -28,12 +28,9 @@ const NavBar = () => {
     <div className='nav-bar'>
         <img src={logo} width={'50px'}></img>
         {clicked?<h2 className='menu'>Menu</h2>  :"" }
+        
         <nav className='nav'>
-            {pressed?<div className='search-hidden'>
-                    ss
-            </div>:""}
             <aside className='nav-left'>
-                
            
                 <div className='search'>
                     <div className="search-logo">
@@ -74,6 +71,7 @@ const NavBar = () => {
                     <button className='signup'><p>Sign up</p></button>
                 
                 </div>
+                
                 </div>
                
 
@@ -85,6 +83,17 @@ const NavBar = () => {
                     <FontAwesomeIcon className='hidden-search' onClick={clickSearch}  icon={faMagnifyingGlass}  />
                     <FontAwesomeIcon className='hidden-bar' onClick={clickMenu} icon={!clicked?faBarsStaggered:faXmark} />
             </div>
+
+            {pressed?<div className='search-hidden'>
+                <div className='search-main'>
+                    <div className="search-logo-hidden">
+                        <FontAwesomeIcon icon={faMagnifyingGlass}  />
+                    </div>
+                        <input type='text' placeholder='Search'></input> 
+                </div>
+                
+                </div>
+                :""}
     </div>
   )
 }

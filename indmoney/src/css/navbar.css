@@ -163,7 +163,7 @@
         display: none;
         width: 100vw;
         height: 100vh;
-        background-color: #dfdfdf9b;
+        background-color: #dfdfdf;
         position: fixed;
         top:82px;
         
@@ -219,5 +219,46 @@
 
     .hidden-icons{
         margin-right: 2vh;
+    }
+
+    .search-hidden{
+        position: fixed;
+        background-color: #dfdfdf;
+        top:86px;
+        width: 100vw;
+        height: 100vh;
+    }
+
+
+    .search-main{
+
+        display: flex;
+        margin-right: 2vh;
+        width:100% ;
+        height:6vh
+    }
+    .search-main input{
+        width: 90%;
+        border:rgba(0, 0, 0, 0.09) solid 1px;
+        border-top-right-radius: 2vh;
+        border-bottom-right-radius: 2vh;
+        background-color: #fff;
+        border-left: solid rgb(255, 255, 255) 0px;
+        font-size: 15px;
+        margin-right: 3vh;
+    }
+    .search-logo-hidden{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        background-color: #ffffff;;
+        border-top-left-radius: 2vh;
+        border-bottom-left-radius:2vh ;
+        border:rgba(0, 0, 0, 0.09) solid 1px;
+        border-right: solid rgb(255, 255, 255) 0px;
+        
+        padding:0 2vh;
+        
     }
 } 
