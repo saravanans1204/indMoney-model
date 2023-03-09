@@ -26,15 +26,19 @@ const Body = () => {
                     </div>
                 </li>
             </ul>
+
+
             <div className='header-main'>
                 <h1>Why has Cipla share price declined 15% over the past month?</h1>
                 <span>
                     <p>Tue Mar 07 2023</p>
                     <p>Last updated: Thu Mar 09 2023</p>
                 </span>
+
+
                 <div className='head'>
                  <img style={{marginTop:'2vh'}} src={medium}></img>
-                 <ul>
+                 <ul className='head-ul'>
                     <h3>Invest In</h3>
                         <li>IndStocks</li>
                         <li>Mutual Funds</li>

@@ -52,19 +52,47 @@
 
 .head{
     display: flex;
-    gap:2vh;
-    justify-content: space-between;
+    gap:4vh;
+
     width: 100%;
 }
 .head img{
     width:80% ;
     max-width: 669px;
+    max-height:423px;
 }
 
-.head ul{
-    width:20% ;
+.head-ul{
+    display: flex;
+    border-radius: .8vh;
+    box-shadow: 1px 1px 1px 2px rgba(158, 158, 158, 0.283);
+    padding: 3vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh;
+    width:40% ;
+    min-height: 475px;
+    max-width: 270px;
     list-style: none;
 }
+
+.head-ul h3{
+    font-size:24px ;
+    white-space: nowrap;
+}
+
+.head-ul li{
+    background-color: rgba(97, 99, 99, 0.177);
+    border-radius: .8vh;
+    padding: 1vh;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 17px;
+    font-weight: 600;
+    width: 100%;
+}
+
 @media(max-width:1150px){
 
     .body-main{
