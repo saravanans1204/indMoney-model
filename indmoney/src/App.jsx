@@ -1,6 +1,6 @@
 
 import NavBar from './components/NavBar'
-
+import Body from './components/Body'
 
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <NavBar/>
-      <h1>saravanan</h1>
+      <Body/>
     </div>
   )
 }
