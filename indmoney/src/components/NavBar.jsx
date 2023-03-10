@@ -2,7 +2,6 @@ import React from 'react'
 import { useState } from 'react'
 import '../css/navbar.css'
 import logo from '../assets/ind.webp'
-import search from '../assets/search.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import{faMagnifyingGlass,faCaretDown,faHeadset,faBarsStaggered,faXmark,faArrowRight} from '@fortawesome/free-solid-svg-icons'
 const NavBar = () => {
@@ -21,7 +20,7 @@ const NavBar = () => {
 
 
 
-   console.log('rendered')
+
 
   return (
     <div className='nav-bar'>

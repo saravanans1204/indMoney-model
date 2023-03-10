@@ -1,0 +1,8 @@
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-top div{
+    width: 50%;
+}
