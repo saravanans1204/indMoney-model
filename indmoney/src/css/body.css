@@ -1,4 +1,5 @@
 
+
 .body{
     display: flex;
     justify-content: center;
@@ -8,7 +9,10 @@
 
     
 }
-
+.body h1{
+    font-size: 2.6vh;
+    white-space:normal;
+}
 .body-main{
     display: flex;
     flex-direction: column;
@@ -52,28 +56,90 @@
 
 .head{
     display: flex;
-    gap:4vh;
-
-    width: 100%;
+    gap:3vh;
+    width: 94%;
+}
+.first-section{
+    display: flex;
+    flex-direction: column;
+    gap:2vh;
+    height: 100%;
 }
 .head img{
-    width:80% ;
-    max-width: 669px;
-    max-height:423px;
+    width:100% ;
+    height: 100%;
+    max-width: 909px;
+    max-height:900px;
 }
 
+.head-brands{
+    display: flex;
+    gap:1.5vh;
+    margin-left: 1vh;
+    
+}
+
+.second-section{
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    flex-direction: column;
+    gap:2vh;
+}
+
+.second-section p{
+    font-size: 1.4vh;
+    line-height:2.5vh;
+    font-family: 700;
+}
+
+.third-section{
+    display: flex;
+    flex-direction: column;
+    gap:2vh;
+}
+
+.third-section p{
+    font-size: 1.4vh;
+    line-height:2.5vh;
+    font-family: 700;
+}
+
+.third-section span{
+    font-weight: 600;
+    color: rgb(77, 76, 76);
+}
+
+
+.fourth-section{
+    display: flex;
+    flex-direction: column;
+    gap:2vh;
+}
+
+.fourth-section p{
+    font-size: 1.4vh;
+    line-height:2.5vh;
+    font-family: 700;
+}
+
+.fourth-section span{
+    font-weight: 600;
+    color: rgb(77, 76, 76);
+}
+/* sidebar */
 .head-ul{
     display: flex;
     border-radius: .8vh;
-    box-shadow: 1px 1px 1px 2px rgba(158, 158, 158, 0.283);
-    padding: 3vh;
+    border: rgba(128, 128, 128, 0.173) solid .4px;
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.189);
+    padding: 2vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1vh;
     width:40% ;
     min-height: 475px;
-    max-width: 270px;
+    min-width: 290px;
     list-style: none;
 }
 
@@ -91,6 +157,56 @@
     font-size: 17px;
     font-weight: 600;
     width: 100%;
+}
+
+
+
+
+.head-side-bar{
+    display: flex;
+    flex-direction: column;
+}
+
+.download{
+    display: flex;
+    white-space: nowrap;
+    border-radius: .8vh;
+    border: rgba(128, 128, 128, 0.173) solid .4px;
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.189);
+    padding: 2vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh;
+    min-width: 290px;
+    width: 40%;
+    list-style: none;
+    margin-top: 2vh;
+}
+
+.download h2{
+    font-weight: 400;
+    font-size:1.8vh;
+}
+
+.apple-store{
+    background-color: aquamarine;
+    border-radius: 1vh;
+}
+
+.play-store{
+    background-color: aquamarine;
+    border-radius: 1vh;
+    
+}
+
+
+.store{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1vh
 }
 
 @media(max-width:1150px){
