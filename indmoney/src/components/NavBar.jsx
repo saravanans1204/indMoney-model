@@ -16,7 +16,6 @@ const NavBar = () => {
    }
 
    const clickSearch=()=>{
-    
     setPressed(!pressed)
    }
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import medium from '../assets/medium.jpg'
+import medium from '../../assets/medium.jpg'
 
 
 const SectionFirst = () => {
