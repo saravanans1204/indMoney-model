@@ -4,5 +4,43 @@
 }
 
 .footer-top div{
+    padding: 20px;
     width: 50%;
+}
+
+.logo{
+    max-width:  139px;
+    min-width: 90px;
+    
+}
+
+
+.left-buttons{
+    display: flex;
+    gap:20px;
+    
+   
+}
+
+.left-buttons img{
+    width: 90%;
+    
+}
+
+
+
+@media(max-width:966px){
+    .footer-top{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-top div{
+        padding: 20px;
+        width: 100%;
+    }  
+
+    .left-buttons img{
+        width: 40%;
+        
+    }
 }
