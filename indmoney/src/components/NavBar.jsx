@@ -15,6 +15,7 @@ const NavBar = () => {
 
     const dropDownClick=()=>{
         setdropDown(!dropDown)
+        console.log('hello')
         if(!dropDown){
             // document.querySelector('.body-main').style.opacity='40%'
             console.log(document.querySelector('.dropdown-hidden').classList.add('dropdown-hidden-active'))
@@ -30,6 +31,7 @@ const NavBar = () => {
     //   );
     function clickCarot(){
         setCarot(!carot)
+        console.log('hello')
         document.querySelector('.drop-container').classList.toggle('drop-active')
         if(!carot && !clicked){
             // document.querySelector('.body-main').style.opacity='40%'
@@ -132,15 +134,26 @@ const NavBar = () => {
                                         <li>Fixed Deposits</li>
                                     </ul>
                                 </div>
-                            <span onClick={clickCarot}>
-                                <li onClick={dropDownClick}>
-                                    <a ><p>Invest</p></a>
-                                    {clicked?<FontAwesomeIcon className='hidden-icons' icon={carot?faCaretDown:faCaretUp}  />:''}
-                                </li>
-                                {clicked?<div className='dropdown-hidden ' ><li>INDstocks</li>
+                                {clicked? 
+                                <div onClick={dropDownClick}>
+                                    <li>
+                                        <a ><p>Invest</p></a>
+                                        <FontAwesomeIcon className='hidden-icons' icon={!dropDown?faCaretDown:faCaretUp}  />
+                                    </li>
+                                    <div className='dropdown-hidden ' >
+                                         <li>INDstocks</li>
                                         <li>Mutual Funds</li>
                                         <li>US Stocks</li>
-                                        <li>Fixed Deposits</li></div>:''}
+                                        <li>Fixed Deposits</li>
+                                    </div>
+                                </div>:''}
+                            <span onClick={clickCarot}>
+                            {!clicked?<li>
+                                <a ><p>Invest</p></a>
+                                    {clicked?<FontAwesomeIcon className='hidden-icons' icon={carot?faCaretDown:faCaretUp}  />:''}
+                                </li>:''}
+                                
+                                
                                         
                                 {!clicked?<FontAwesomeIcon  icon={carot?faCaretDown:faCaretUp}  />:''}
                                 </span>
