@@ -9,10 +9,25 @@ const NavBar = () => {
     const [clicked,setClicked]=useState(false)
     const [pressed,setPressed]=useState(false)
     const [carot,setCarot]=useState(false)
+
+    const [dropDown,setdropDown]=useState(false)
     
-    const [windowDimensions, setWindowDimensions] = useState(
-        getWindowDimensions()
-      );
+
+    const dropDownClick=()=>{
+        setdropDown(!dropDown)
+        if(!dropDown){
+            // document.querySelector('.body-main').style.opacity='40%'
+            console.log(document.querySelector('.dropdown-hidden').classList.add('dropdown-hidden-active'))
+            
+            
+        }else{
+            console.log(document.querySelector('.dropdown-hidden').classList.remove('dropdown-hidden-active'))
+        }
+        
+    }
+    // const [windowDimensions, setWindowDimensions] = useState(
+    //     getWindowDimensions()
+    //   );
     function clickCarot(){
         setCarot(!carot)
         document.querySelector('.drop-container').classList.toggle('drop-active')
@@ -27,13 +42,15 @@ const NavBar = () => {
         
         
     }
-    function getWindowDimensions() {
-        const { innerWidth: width, innerHeight: height } = window;
-        return {
-          width,
-          height,
-        };
-      }
+
+
+    // function getWindowDimensions() {
+    //     const { innerWidth: width, innerHeight: height } = window;
+    //     return {
+    //       width,
+    //       height,
+    //     };
+    //   }
 
       useEffect(() => {
         function handleResize() {
@@ -47,10 +64,15 @@ const NavBar = () => {
       }, []);
     
  
-    if(clicked){
+    if(clicked ){
         document.querySelector('.body-main').classList.remove('blur')
     }
 
+ 
+
+    if(carot && !clicked ){
+        document.querySelector('.body-main').classList.add('blur')
+    }
     if(carot && !clicked ){
         document.querySelector('.body-main').classList.add('blur')
     }
@@ -111,10 +133,14 @@ const NavBar = () => {
                                     </ul>
                                 </div>
                             <span onClick={clickCarot}>
-                                <li>
+                                <li onClick={dropDownClick}>
                                     <a ><p>Invest</p></a>
                                     {clicked?<FontAwesomeIcon className='hidden-icons' icon={carot?faCaretDown:faCaretUp}  />:''}
                                 </li>
+                                {clicked?<div className='dropdown-hidden ' ><li>INDstocks</li>
+                                        <li>Mutual Funds</li>
+                                        <li>US Stocks</li>
+                                        <li>Fixed Deposits</li></div>:''}
                                         
                                 {!clicked?<FontAwesomeIcon  icon={carot?faCaretDown:faCaretUp}  />:''}
                                 </span>

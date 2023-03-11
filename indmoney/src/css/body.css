@@ -346,7 +346,27 @@
         padding:2.5vh 4vh ;
     }
 
-   
+    .dropdown-hidden{
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;        
+    }
+    .dropdown-hidden li{
+        display: flex;
+        width: 90%;
+        justify-content: center;
+        
+    }
+    .dropdown-hidden li:hover{
+            background-color: #ffffff67;
+
+    }
+    .dropdown-hidden-active{
+        display: flex;
+    }
+
+    
 }
 
 
