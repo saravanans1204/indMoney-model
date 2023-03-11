@@ -4,19 +4,19 @@
     display: flex;
     justify-content: center;
     background-color:  #ffffff;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    
 
     
 }
 .body h1{
-    font-size: 2.6vh;
+    font-size: 30px;
     white-space:normal;
 }
 .body-main{
     display: flex;
     flex-direction: column;
-    padding:2.5vh 0vh ;
+    padding:3vh 0vh ;
     gap:1vh;
     width:1080px ;
     max-width: 1080px;
@@ -57,9 +57,9 @@
 .head{
     display: flex;
     gap:3vh;
-    width: 94%;
+    width: 100%;
 }
-.first-section{
+.Top{
     display: flex;
     flex-direction: column;
     gap:2vh;
@@ -75,6 +75,7 @@
 .head-brands{
     display: flex;
     gap:1.5vh;
+    margin-top: 20px;
     margin-left: 1vh;
     
 }
@@ -87,20 +88,20 @@
 }
 
 .second-section p{
-    font-size: 1.4vh;
-    line-height:2.5vh;
+    font-size: 20px;
+    line-height :35px;
     font-family: 700;
 }
 
 .third-section{
     display: flex;
     flex-direction: column;
-    gap:2vh;
+    gap:3vh;
 }
 
 .third-section p{
-    font-size: 1.4vh;
-    line-height:2.5vh;
+    font-size: 20px;
+    line-height :35px;
     font-family: 700;
 }
 
@@ -113,12 +114,12 @@
 .fourth-section{
     display: flex;
     flex-direction: column;
-    gap:2vh;
+    gap:3vh;
 }
 
 .fourth-section p{
-    font-size: 1.4vh;
-    line-height:2.5vh;
+    font-size: 20px;
+    line-height :35px;
     font-family: 700;
 }
 
@@ -126,18 +127,110 @@
     font-weight: 600;
     color: rgb(77, 76, 76);
 }
+
+
+.drop-down{
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+    margin-top: 2vh;
+    margin-left: 1vh;
+}
+
+.down{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 2px 1px rgba(70, 70, 70, 0.113);
+    padding: 1vh 1.6vh;
+    border-radius: 1vh;
+    cursor: pointer;
+    
+}
+
+
+.five-section{
+    display: flex;
+    gap:1vh;
+    flex-direction: column;
+}
+
+.five-section span{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: rgb(72, 72, 72);
+}
+
+.five-section p{
+    font-size: 20px;
+}
+
+.tag{
+    color: rgb(28, 104, 186);
+    background-color: rgba(20, 111, 160, 0.252);
+    width: fit-content;
+    padding: 4px;
+    border-radius:4px;
+}
+
+/* last sec */
+.related{
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    padding:3vh 0vh ;
+    gap:4vh;
+    width: 100%;
+    max-width: 1080px;
+    transition: all .5s ;
+}
+
+
+
+
+.related h1{
+    font-size: 3vh;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+
+
+.card-holder{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 7px;
+    margin-left: 20px;
+    gap: 20px;
+    height: 99%;
+    box-shadow: 0px 0px 2px 1px rgba(70, 70, 70, 0.113);
+   
+}
+.ctext{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap:10px;
+}
+.disclaimer{
+    margin-left: 20px;
+    font-size: 10px;
+    line-height: 18px;
+}
 /* sidebar */
 .head-ul{
     display: flex;
     border-radius: .8vh;
-    border: rgba(128, 128, 128, 0.173) solid .4px;
-    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.189);
+    box-shadow: 0px 0px 2px 1px rgba(70, 70, 70, 0.113);
     padding: 2vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1vh;
     width:40% ;
+    cursor: pointer;
     min-height: 475px;
     min-width: 290px;
     list-style: none;
@@ -159,8 +252,30 @@
     width: 100%;
 }
 
+.bottom{
+    display: flex;
+    color: #ffffff;
+    width: 100%;
+    margin-top: 3.5vh;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    padding:3vh 0vh ;
+    gap:4vh;
+    width:1080px ;
+    max-width: 1080px;
+    transition: all .5s ;
 
+}
 
+.footer{
+    background-color: #191C1F;
+}
+
+/* 
+.head-ul li:hover{
+  
+} */
 
 .head-side-bar{
     display: flex;
@@ -171,48 +286,85 @@
     display: flex;
     white-space: nowrap;
     border-radius: .8vh;
-    border: rgba(128, 128, 128, 0.173) solid .4px;
-    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.189);
+    box-shadow: 0px 0px 2px 1px rgba(70, 70, 70, 0.113);
     padding: 2vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1vh;
+    gap: 1.5vh;
     min-width: 290px;
     width: 40%;
     list-style: none;
-    margin-top: 2vh;
+    margin-top: 4vh;
 }
 
 .download h2{
     font-weight: 400;
-    font-size:1.8vh;
+    font-size:20px;
 }
 
 .apple-store{
-    background-color: aquamarine;
-    border-radius: 1vh;
+   width: 79%;
 }
 
 .play-store{
-    background-color: aquamarine;
-    border-radius: 1vh;
-    
-}
-
+    width: 80%;
+ }
 
 .store{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:1vh
+    gap:.8vh
 }
 
+
+.bold{
+    font-weight: 800;
+    font-style: bold;
+}
+
+.rating{
+    font-size: 20px;
+}
 @media(max-width:1150px){
 
-    .body-main{
+    .body-main,.related{
         padding:2.5vh 4vh ;
     }
+
+}
+
+
+@media(max-width:966px){
+
+   .head{
+        display: flex;
+        flex-direction: column;
+   }
+
+   .side-bar{
+    width: 100%;
+   }
+
+   .side-bar ul{
+    width: 100%;
+   }
+
+   .apple-store{
+    
+    max-width: 260px;
+ }
+ 
+ .play-store{
+    max-width: 260px;
+  }
+
+  .head-ul{
+    min-height: 0px;
+    min-width: 0px;
+  }
+
 
 }
