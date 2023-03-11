@@ -1,20 +1,78 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState,useEffect} from 'react'
 import '../css/navbar.css'
 import logo from '../assets/ind.webp'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import{faMagnifyingGlass,faCaretDown,faHeadset,faBarsStaggered,faXmark,faArrowRight} from '@fortawesome/free-solid-svg-icons'
+import{faCaretUp,faMagnifyingGlass,faCaretDown,faHeadset,faBarsStaggered,faXmark,faArrowRight, faL} from '@fortawesome/free-solid-svg-icons'
 const NavBar = () => {
 
     const [clicked,setClicked]=useState(false)
     const [pressed,setPressed]=useState(false)
-  
+    const [carot,setCarot]=useState(false)
+    
+    const [windowDimensions, setWindowDimensions] = useState(
+        getWindowDimensions()
+      );
+    function clickCarot(){
+        setCarot(!carot)
+        document.querySelector('.drop-container').classList.toggle('drop-active')
+        if(!carot && !clicked){
+            // document.querySelector('.body-main').style.opacity='40%'
+            document.querySelector('.body-main').classList.add('blur')
+            
+            
+        }else{
+            document.querySelector('.body-main').classList.remove('blur')
+        }
+        
+        
+    }
+    function getWindowDimensions() {
+        const { innerWidth: width, innerHeight: height } = window;
+        return {
+          width,
+          height,
+        };
+      }
+
+      useEffect(() => {
+        function handleResize() {
+          setWindowDimensions(getWindowDimensions());
+          
+        }
+    
+        window.addEventListener("resize", handleResize);
+        
+        return () => window.removeEventListener("resize", handleResize);
+      }, []);
+    
+ 
+    if(clicked){
+        document.querySelector('.body-main').classList.remove('blur')
+    }
+
+    if(carot && !clicked ){
+        document.querySelector('.body-main').classList.add('blur')
+    }
+    
+   
    const clickMenu=()=>{
     setClicked(!clicked)
-    document.querySelector('.nav').classList.toggle('hidden-active')
+    if(!clicked){
+        document.querySelector('body').style.overflow='hidden'
+    }else{
+        document.querySelector('body').style.overflow='scroll'
+    }
+    document.querySelector('.nav').classList.toggle('hidden-active') 
    }
 
    const clickSearch=()=>{
+    document.querySelector('body').style.overflow='hidden'
+    if(!pressed){
+        document.querySelector('body').style.overflow='hidden'
+    }else{
+        document.querySelector('body').style.overflow='scroll'
+    }
     setPressed(!pressed)
    }
 
@@ -26,29 +84,40 @@ const NavBar = () => {
     <div className='nav-bar'>
         
         <img src={logo}className='hidden-main' width={'50px'}></img>
+        
         {clicked?<h2 className='hidden-main'>Menu</h2>  :"" }
         <nav className='nav'>
             <aside className='nav-left'>
                 <img src={logo} width={'50px'}></img>
                 <div className='search'>
                     <div className="search-logo">
+                    
                     <FontAwesomeIcon icon={faMagnifyingGlass}  />
                     </div>
                     <input type='text' placeholder='Search'></input> 
+                    
                 </div>
                 
                 
             </aside>
             <div className='nav-menu'>
                         <ul>
-                            <span>
+                                <div className='drop-container'>
+                                    <ul>
+                                        <li>INDstocks</li>
+                                        <li>Mutual Funds</li>
+                                        <li>US Stocks</li>
+                                        <li>Fixed Deposits</li>
+                                    </ul>
+                                </div>
+                            <span onClick={clickCarot}>
                                 <li>
-                                    <a><p>Invest</p></a>
-                                    {clicked?<FontAwesomeIcon className='hidden-icons' icon={faCaretDown}  />:''}
+                                    <a ><p>Invest</p></a>
+                                    {clicked?<FontAwesomeIcon className='hidden-icons' icon={carot?faCaretDown:faCaretUp}  />:''}
                                 </li>
-                                {!clicked?<FontAwesomeIcon  icon={faCaretDown}  />:''}
+                                        
+                                {!clicked?<FontAwesomeIcon  icon={carot?faCaretDown:faCaretUp}  />:''}
                                 </span>
-                            
                             <li>
                                 <a>Features</a>
                                 {clicked?<FontAwesomeIcon className='hidden-icons' icon={faArrowRight}  />:''}

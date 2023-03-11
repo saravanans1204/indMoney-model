@@ -14,8 +14,10 @@ import SideBar from './bodyComponent/SideBar'
 
 const Body = () => {
     
+
   return (
     <div className='body'>
+       
         <div className='body-main'>
             <ul className='body-ul'>
                 <li className='bodu-li'>
@@ -29,10 +31,13 @@ const Body = () => {
                     Articles
                     <FontAwesomeIcon icon={faAngleRight}  />
                     </div>
+                    
                 </li>
+                
                 <li className='bodu-li'>
+                    
                     <div className='ul-div'>
-                    Why has Cipla share price declined 15% over the past month?
+                    Why has Cipla share price declined 15% over the past month?       
                     </div>
                 </li>
             </ul>
