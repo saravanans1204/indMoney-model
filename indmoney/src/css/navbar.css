@@ -83,6 +83,7 @@
 }
 .nav-menu li{
     display: inline-block;
+    cursor:pointer;
     list-style: none;
     font-weight: 400;
     margin-right: .5vh;
@@ -103,6 +104,7 @@
 
 .headset-icon{
     height:20px;
+    cursor:pointer;
     padding: .8vh;
     border-radius: 2vh;
     background-color: rgba(169, 167, 167, 0.346);
@@ -111,6 +113,7 @@
 
 .login{
     padding: 12px;
+    cursor:pointer;
     white-space: nowrap;
     color: #575757;
     font-size: 15px;
@@ -124,6 +127,7 @@
 .signup{
     padding: 13px;
     color: #fffdfd;
+    cursor:pointer;
     background-color: rgba(0, 128, 0, 0.736);
     font-size: 16px;
     font-weight: 600;

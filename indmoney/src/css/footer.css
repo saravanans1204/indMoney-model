@@ -1,10 +1,13 @@
+
 .footer-top{
     display: flex;
     justify-content: space-between;
+    padding:0 20px;
+    
 }
 
 .footer-top div{
-    padding: 20px;
+    padding: 14px;
     width: 50%;
 }
 
@@ -13,23 +16,134 @@
     min-width: 90px;
     
 }
+.footer-main{
+   display: flex;
+   padding: 20px;
+   width: 100%;
+}
+.footer-main section{
+    width: 50%;
+}
 
+.main-left{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap:30px
+}
+.bottom{
+    margin-top: 0px;
+}
 
 .left-buttons{
     display: flex;
+    width: 90%;
     gap:20px;
     
    
 }
 
 .left-buttons img{
-    width: 90%;
+    /* width: 70%; */
+    width:40%;
     
 }
 
+.footer-brands{
+    display: flex;
+    gap: 15px;
+   
+}
 
+.left{
+    display: flex;
+    flex-direction: column;
+   
+}
+.footer-bottom{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+
+}
+
+
+.footer-bottom p{
+   
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.trans{
+    opacity: 60%;
+    display: flex;
+    flex-direction:column ;
+    gap:30px;
+}
+
+/* right */
+.right{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap:30px;
+}
+.list h1{
+    font-size: 18px;
+}
+.list ul{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    list-style: none;
+}
+
+.list{
+    width: 50%;
+    display: flex;
+    
+    gap:15px;
+    justify-content: space-between;
+    flex-direction: row;
+
+}
+
+.right-bottom{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap:20px;
+}
+
+.last{
+    background-color: rgb(207, 167, 115);
+    width: 700px;
+}
+.right-bottom p{
+    font-size: 14px;
+    font-weight: 500;
+}
 
 @media(max-width:966px){
+    .bottom{
+        overflow: hidden;
+    }
+    .footer-main{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .main-left{
+        justify-content: space-between;
+        
+        padding: 0 30px;
+        width: 80%;
+        
+    }
+
+    .main-left img{
+        width: 60%;
+    }
     .footer-top{
         display: flex;
         flex-direction: column;
@@ -39,8 +153,12 @@
         width: 100%;
     }  
 
-    .left-buttons img{
-        width: 40%;
-        
+    .list{
+        padding: 0 30px;
+        width: 50%;
+        display: flex;
+    
+       
     }
+    
 }

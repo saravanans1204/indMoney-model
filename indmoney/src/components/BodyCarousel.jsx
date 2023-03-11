@@ -2,6 +2,8 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import React from 'react'
 import imgs from '../assets/carousal assets/1.jpg'
+
+
 const BodyCarousel = () => {
 
 
@@ -14,11 +16,11 @@ const BodyCarousel = () => {
         },
         desktop: {
           breakpoint: { max: 1024, min: 800 },
-          items: 1
+          items: 2
         },
         tablet: {
           breakpoint: { max: 800, min: 464 },
-          items: 1
+          items: 2
         },
         mobile: {
           breakpoint: { max: 600, min: 0 },
@@ -58,23 +60,26 @@ const BodyCarousel = () => {
   return (
     <div className='body'>
         <div className='related'>
-            {/* <h1>Related Articles</h1>   */}
-            <Carousel responsive={responsive}   className='carousel'>
+            <h1>Related Articles</h1>  
+            <Carousel responsive={responsive} containerClass='car' additionalTransfrom={-5}>
+           
                 {carouselData.map((car)=>{
                     return(
                         <div className='card-holder'>
                             <img src={car.img} alt='card'></img>
                             <div className='ctext'>
-                              <p>{car.p}</p>
+                              <h4>{car.p}</h4>
                               <p>{car.time}</p>
                             </div>
                            
                         </div>
+                       
                     )
                 })}
+                 
             </Carousel> 
 
-            {/* <p className='disclaimer'>
+            <p className='disclaimer'>
             Disclaimer: This is not an investment advisory. 
             The article above is for information purposes only. 
             Investments in the securities market are subject to market 
@@ -85,7 +90,7 @@ const BodyCarousel = () => {
              with the investment before choosing a fund, or designing a portfolio that suits your needs. 
              The performance and returns of any investment portfolio can neither be 
              predicted nor guaranteed.
-            </p> */}
+            </p>
         </div>
     </div>
   )

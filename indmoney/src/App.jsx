@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <NavBar/>
       <Body/>
-      {/* <BodyCarousel/> */}
+      <BodyCarousel/>
       <Footer/>
     </div>
   )
