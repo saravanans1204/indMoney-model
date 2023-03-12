@@ -15,7 +15,6 @@ const NavBar = () => {
 
     const dropDownClick=()=>{
         setdropDown(!dropDown)
-        console.log('hello')
         if(!dropDown){
             // document.querySelector('.body-main').style.opacity='40%'
             console.log(document.querySelector('.dropdown-hidden').classList.add('dropdown-hidden-active'))
@@ -128,7 +127,7 @@ const NavBar = () => {
                 
             </aside>
             <div className='nav-menu'>
-                <ul className='nav-menu-ul '>
+                <ul className='nav-menu-ul nav-menu-active'>
                     <div className='drop-container'>
                         <ul>
                             <li>INDstocks</li>

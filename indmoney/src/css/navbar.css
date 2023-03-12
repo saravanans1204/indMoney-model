@@ -15,7 +15,7 @@
 .nav{
     display: flex;
     align-items: center;
-    gap:30px;
+    gap:10px;
     width:1080px ;
     max-width: 1080px;
     transition: all 1s ;
@@ -101,7 +101,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:20px
+    gap:17px
 }
 
 .headset-icon{
@@ -203,7 +203,8 @@
         margin-right: 4vh;
     }
     .nav-bar{
-        justify-content: space-between;        
+        justify-content: space-between;
+        padding:0 1vh;     
     }
     .nav-bar img{
         margin-left: 3vh;
@@ -327,7 +328,12 @@
     }
 } 
 
-
+.nav-menu-active{
+    position:fixed;
+    top:15vh;
+    justify-content: center;
+    display: block;
+} 
 
 
 
@@ -338,7 +344,6 @@
         justify-content: center;
         display: block;
     } 
-
     
 } 
 
@@ -352,3 +357,5 @@
        
     }
 }  
+
+
