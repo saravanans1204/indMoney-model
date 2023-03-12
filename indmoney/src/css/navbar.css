@@ -204,7 +204,7 @@
     }
     .nav-bar{
         justify-content: space-between;
-        padding:0 1vh;     
+           
     }
     .nav-bar img{
         margin-left: 3vh;
@@ -257,7 +257,8 @@
         width: 100vw;
     }
     .nav-buttons{
-        width: 100%;
+        width: 95%;
+        margin-right: 20px;
     }
     .login{
         width: 40%;
