@@ -114,14 +114,40 @@
     width: 100%;
     gap:20px;
 }
-
-.last{
-    background-color: rgb(207, 167, 115);
-    width: 700px;
-}
 .right-bottom p{
     font-size: 14px;
     font-weight: 500;
+}
+
+.last{
+    display: flex;
+    color: #202020;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 3vh;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    padding:3vh 0vh ;
+    gap:4vh;
+    width:1080px ;
+    max-width: 1080px;
+    transition: all .5s ;
+
+}
+
+.last span{
+    cursor: pointer;
+    box-shadow: 0px 0px 2px 1px rgba(70, 70, 70, 0.217);
+    padding: 1vh;
+    border-radius: 1vh;
+    width: 80%;
+    
+}
+
+.last h3{
+    margin-left: 60px;
 }
 
 @media(max-width:966px){

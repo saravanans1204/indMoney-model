@@ -8,7 +8,7 @@ import applogo from '../assets/old-app-store.svg'
 
 const Footer = () => {
   return (
-    
+    <div>
     <div className='body footer'>
         <div className='bottom'>
         <div className='footer-main'>
@@ -110,6 +110,14 @@ const Footer = () => {
        
         
     
+    </div>
+
+    <div style={{backgroundColor:'white'}} className='body'>
+      <div className='last'>
+          <span><h3>US stocks watchlist</h3></span>
+          <span><h3>Mutual Funds watchlist</h3></span>
+      </div>
+    </div>
     </div>
   )
 }

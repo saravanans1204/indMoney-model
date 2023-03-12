@@ -29,26 +29,32 @@ const BodyCarousel = () => {
       };
 
       const carouselData=[{
+        id:1,
         img:imgs,
         p:'JP Morgan downgrades Indian IT sector: Check outlook on TCS, Wipro, Infosys and HCL Tech',
         time:new Date().toLocaleString()
       },{
+        id:2,
         img:imgs,
         p:'JP Morgan downgrades Indian IT sector: Check outlook on TCS, Wipro, Infosys and HCL Tech',
         time:new Date().toLocaleString()
       },{
+        id:3,
         img:imgs,
         p:'JP Morgan downgrades Indian IT sector: Check outlook on TCS, Wipro, Infosys and HCL Tech',
         time:new Date().toLocaleString()
       },{
+        id:4,
         img:imgs,
         p:'JP Morgan downgrades Indian IT sector: Check outlook on TCS, Wipro, Infosys and HCL Tech',
         time:new Date().toLocaleString()
       },{
+        id:5,
         img:imgs,
         p:'JP Morgan downgrades Indian IT sector: Check outlook on TCS, Wipro, Infosys and HCL Tech',
         time:new Date().toLocaleString()
       },{
+        id:6,
         img:imgs,
         p:'JP Morgan downgrades Indian IT sector: Check outlook on TCS, Wipro, Infosys and HCL Tech',
         time:new Date().toLocaleString()
@@ -65,7 +71,7 @@ const BodyCarousel = () => {
            
                 {carouselData.map((car)=>{
                     return(
-                        <div className='card-holder'>
+                        <div className='card-holder' key={car.id}>
                             <img src={car.img} alt='card'></img>
                             <div className='ctext'>
                               <h4>{car.p}</h4>

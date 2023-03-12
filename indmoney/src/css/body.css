@@ -10,7 +10,7 @@
     
 }
 .body h1{
-    font-size: 30px;
+    font-size: 32px;
     white-space:normal;
 }
 .body-main{
@@ -20,7 +20,7 @@
     gap:1vh;
     width:1080px ;
     max-width: 1080px;
-    transition: all .5s ;
+    transition: smooth .2s ;
 }
 
 
@@ -141,7 +141,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0px 0px 2px 1px rgba(70, 70, 70, 0.113);
+    box-shadow: 0px 0px 2px 1px rgba(70, 70, 70, 0.203);
     padding: 1vh 1.6vh;
     border-radius: 1vh;
     cursor: pointer;
@@ -205,7 +205,7 @@
     margin-left: 20px;
     gap: 20px;
     height: 99%;
-    box-shadow: 0px 0px 2px 1px rgba(70, 70, 70, 0.113);
+    box-shadow: 0px 0px 2px 1px rgba(70, 70, 70, 0.203);
    
 }
 .ctext{
@@ -223,7 +223,7 @@
 .head-ul{
     display: flex;
     border-radius: .8vh;
-    box-shadow: 0px 0px 2px 1px rgba(70, 70, 70, 0.113);
+    box-shadow: 0px 0px 2px 1px rgba(70, 70, 70, 0.203);
     padding: 2vh;
     flex-direction: column;
     justify-content: center;
@@ -243,8 +243,8 @@
 
 .head-ul li{
     background-color: rgba(97, 99, 99, 0.177);
-    border-radius: .8vh;
-    padding: 1vh;
+    border-radius: 12px;
+    padding: 10px;
     text-align: center;
     white-space: nowrap;
     font-size: 17px;
@@ -272,6 +272,11 @@
     background-color: #191C1F;
 }
 
+
+.blur{
+    filter: blur(5px);
+    
+}
 /* 
 .head-ul li:hover{
   
@@ -286,7 +291,7 @@
     display: flex;
     white-space: nowrap;
     border-radius: .8vh;
-    box-shadow: 0px 0px 2px 1px rgba(70, 70, 70, 0.113);
+    box-shadow: 0px 0px 2px 1px rgba(70, 70, 70, 0.203);
     padding: 2vh;
     flex-direction: column;
     justify-content: center;
@@ -328,13 +333,44 @@
 .rating{
     font-size: 20px;
 }
+
+
+
+
+
+
+
 @media(max-width:1150px){
 
     .body-main,.related{
         padding:2.5vh 4vh ;
     }
 
+    .dropdown-hidden{
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;        
+    }
+    .dropdown-hidden li{
+        display: flex;
+        width: 90%;
+        justify-content: center;
+        
+    }
+    .dropdown-hidden li:hover{
+            background-color: #ffffff67;
+
+    }
+    .dropdown-hidden-active{
+        display: flex;
+    }
+
+    
 }
+
+
+
 
 
 @media(max-width:966px){
@@ -366,5 +402,5 @@
     min-width: 0px;
   }
 
-
+  
 }
