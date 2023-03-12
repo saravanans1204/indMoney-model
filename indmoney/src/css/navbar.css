@@ -15,7 +15,7 @@
 .nav{
     display: flex;
     align-items: center;
-    gap:1vh;
+    gap:30px;
     width:1080px ;
     max-width: 1080px;
     transition: all 1s ;
@@ -29,8 +29,8 @@
 
 .nav-left input{
     border:rgba(0, 0, 0, 0.09) solid 1px;
-    border-top-right-radius: 2vh;
-    border-bottom-right-radius: 2vh;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
     background-color: #e4e6eb88;
     border-left: solid rgb(255, 255, 255) 0px;
     width: 247px;
@@ -52,8 +52,8 @@
     justify-content: center;
     width: 36px;
     background-color: #e4e6eb88;;
-    border-top-left-radius: 2vh;
-    border-bottom-left-radius:2vh ;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius:20px ;
     border:rgba(0, 0, 0, 0.09) solid 1px;
     border-right: solid rgb(255, 255, 255) 0px;
     height: 48px;
@@ -79,7 +79,7 @@
     display: flex;
     margin-bottom: 4px;
     margin-right: 2vh;
-    gap:2vh
+    gap:30px
 }
 .nav-menu li{
     display: inline-block;
@@ -102,14 +102,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:1vh
+    gap:20px
 }
 
 .headset-icon{
     height:20px;
     cursor:pointer;
     padding: .8vh;
-    border-radius: 2vh;
+    border-radius: 20px;
     background-color: rgba(169, 167, 167, 0.346);
  
 }
@@ -124,7 +124,7 @@
     border: 0px;
     padding-left: 2rem;
     padding-right: 2rem;
-    border-radius: 2vh;
+    border-radius: 18px;
 }
 
 .signup{
@@ -137,7 +137,7 @@
     border: 0px;
     padding-left: 2rem;
     padding-right: 2rem;
-    border-radius: 1vh; 
+    border-radius: 20px; 
     border: 0px;
     white-space: nowrap;
 }
@@ -162,7 +162,7 @@
     z-index: 5;
     background-color: #333232e6;
     border-radius:10px ;
-    box-shadow: 0px 0px 2px 1px rgba(70, 70, 70, 0.113);
+    box-shadow: 0px 0px 2px 1px rgba(70, 70, 70, 0.203);
     
 }
 
@@ -223,8 +223,8 @@
     }
 
     .nav-menu ul{
-        position:fixed;
-        top:15vh;
+        /* position:fixed;
+        top:15vh; */
         justify-content: center;
         display: block;
         
@@ -334,23 +334,23 @@
 
 
 @media(max-height:1065px){
-    .nav-menu ul{
+    .nav-menu-active{
         position:fixed;
         top:20vh;
         justify-content: center;
         display: block;
-    }
+    } 
 
     
-}
+} 
 
-@media(max-height:810px){
-    .nav-menu ul{
+ @media(max-height:810px){
+    .nav-menu-active{
         position:fixed;
-        top:25vh;
+        top:25vh; 
         justify-content: center;
         display: block;
-        
+         
        
     }
-}
+}  

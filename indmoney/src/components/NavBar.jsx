@@ -84,8 +84,11 @@ const NavBar = () => {
     setClicked(!clicked)
     if(!clicked){
         document.querySelector('body').style.overflow='hidden'
+        console.log(document.querySelector('.nav-menu-ul').classList.add('nav-menu-active'))
     }else{
         document.querySelector('body').style.overflow='scroll'
+        console.log(document.querySelector('.nav-menu-ul').classList.remove('nav-menu-active'))
+        
     }
     document.querySelector('.nav').classList.toggle('hidden-active') 
    }
@@ -125,57 +128,56 @@ const NavBar = () => {
                 
             </aside>
             <div className='nav-menu'>
+                <ul className='nav-menu-ul '>
+                    <div className='drop-container'>
                         <ul>
-                                <div className='drop-container'>
-                                    <ul>
+                            <li>INDstocks</li>
+                            <li>Mutual Funds</li>
+                            <li>US Stocks</li>
+                            <li>Fixed Deposits</li>
+                        </ul>
+                    </div>
+                            {clicked? 
+                            <div onClick={dropDownClick}>
+                                <li>
+                                    <a ><p>Invest</p></a>
+                                    <FontAwesomeIcon className='hidden-icons' icon={!dropDown?faCaretDown:faCaretUp}  />
+                                </li>
+                                <div className='dropdown-hidden ' >
                                         <li>INDstocks</li>
-                                        <li>Mutual Funds</li>
-                                        <li>US Stocks</li>
-                                        <li>Fixed Deposits</li>
-                                    </ul>
+                                    <li>Mutual Funds</li>
+                                    <li>US Stocks</li>
+                                    <li>Fixed Deposits</li>
                                 </div>
-                                {clicked? 
-                                <div onClick={dropDownClick}>
-                                    <li>
-                                        <a ><p>Invest</p></a>
-                                        <FontAwesomeIcon className='hidden-icons' icon={!dropDown?faCaretDown:faCaretUp}  />
-                                    </li>
-                                    <div className='dropdown-hidden ' >
-                                         <li>INDstocks</li>
-                                        <li>Mutual Funds</li>
-                                        <li>US Stocks</li>
-                                        <li>Fixed Deposits</li>
-                                    </div>
-                                </div>:''}
+                            </div>:''}
                             <span onClick={clickCarot}>
                             {!clicked?<li>
                                 <a ><p>Invest</p></a>
                                     {clicked?<FontAwesomeIcon className='hidden-icons' icon={carot?faCaretDown:faCaretUp}  />:''}
                                 </li>:''}
                                 
-                                
-                                        
-                                {!clicked?<FontAwesomeIcon  icon={carot?faCaretDown:faCaretUp}  />:''}
-                                </span>
-                            <li>
-                                <a>Features</a>
-                                {clicked?<FontAwesomeIcon className='hidden-icons' icon={faArrowRight}  />:''}
-                            </li>
-                            <li>
-                                <a>Pricing</a>
-                                {clicked?<FontAwesomeIcon  className='hidden-icons' icon={faArrowRight}  />:''}
-                            </li>
-                            <li>
-                                <a>Blog</a>
-                                {clicked?<FontAwesomeIcon className='hidden-icons' icon={faArrowRight}  />:''}
-                            </li>
-                        </ul>
-                    
-                    <div className='nav-buttons'>
-                    <FontAwesomeIcon className='headset-icon' icon={faHeadset}  />
-                    <button className='login' ><p>Log in</p></button>
-                    <button className='signup'><p>Sign up</p></button>
-                
+                            
+                                    
+                            {!clicked?<FontAwesomeIcon  icon={carot?faCaretDown:faCaretUp}  />:''}
+                            </span>
+                        <li>
+                            <a>Features</a>
+                            {clicked?<FontAwesomeIcon className='hidden-icons' icon={faArrowRight}  />:''}
+                        </li>
+                        <li>
+                            <a>Pricing</a>
+                            {clicked?<FontAwesomeIcon  className='hidden-icons' icon={faArrowRight}  />:''}
+                        </li>
+                        <li>
+                            <a>Blog</a>
+                            {clicked?<FontAwesomeIcon className='hidden-icons' icon={faArrowRight}  />:''}
+                        </li>
+                    </ul>
+                <div className='nav-buttons'>
+                <FontAwesomeIcon className='headset-icon' icon={faHeadset}  />
+                <button className='login' ><p>Log in</p></button>
+                <button className='signup'><p>Sign up</p></button>
+            
                 </div>
                 
                 </div>
