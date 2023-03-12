@@ -24,7 +24,7 @@
 .nav-left{
     display: flex;
     padding-right:3px ;
-    gap:2vh;
+    gap:1vh;
 }
 
 .nav-left input{
@@ -71,7 +71,6 @@
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
-    
 }
 
 .nav-menu ul{
@@ -79,7 +78,7 @@
     display: flex;
     margin-bottom: 4px;
     margin-right: 2vh;
-    gap:30px
+    gap:20px
 }
 .nav-menu li{
     display: inline-block;
@@ -137,13 +136,12 @@
     border: 0px;
     padding-left: 2rem;
     padding-right: 2rem;
-    border-radius: 20px; 
+    border-radius: 15px; 
     border: 0px;
     white-space: nowrap;
 }
 
 .hidden-menu{
-   
     gap:1vh;
     display: none;
 }
