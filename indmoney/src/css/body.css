@@ -228,7 +228,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1vh;
+    gap: 2vh;
     width:40% ;
     cursor: pointer;
     min-height: 475px;
@@ -243,8 +243,8 @@
 
 .head-ul li{
     background-color: rgba(97, 99, 99, 0.177);
-    border-radius: .8vh;
-    padding: 1vh;
+    border-radius: 12px;
+    padding: 10px;
     text-align: center;
     white-space: nowrap;
     font-size: 17px;
