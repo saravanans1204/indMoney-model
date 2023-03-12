@@ -9,8 +9,9 @@ const NavBar = () => {
     const [clicked,setClicked]=useState(false)
     const [pressed,setPressed]=useState(false)
     const [carot,setCarot]=useState(false)
-
     const [dropDown,setdropDown]=useState(false)
+
+    
     
 
     const dropDownClick=()=>{
@@ -104,6 +105,12 @@ const NavBar = () => {
 
 
 
+//    if(windowDimensions.width<1150){
+    
+//    }
+
+  
+
 
 
   return (
@@ -127,7 +134,7 @@ const NavBar = () => {
                 
             </aside>
             <div className='nav-menu'>
-                <ul className='nav-menu-ul nav-menu-active'>
+                <ul className='nav-menu-ul'>
                     <div className='drop-container'>
                         <ul>
                             <li>INDstocks</li>
