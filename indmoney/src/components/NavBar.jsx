@@ -53,16 +53,16 @@ const NavBar = () => {
     //     };
     //   }
 
-      useEffect(() => {
-        function handleResize() {
-          setWindowDimensions(getWindowDimensions());
+    //   useEffect(() => {
+    //     function handleResize() {
+    //       setWindowDimensions(getWindowDimensions());
           
-        }
+    //     }
     
-        window.addEventListener("resize", handleResize);
+    //     window.addEventListener("resize", handleResize);
         
-        return () => window.removeEventListener("resize", handleResize);
-      }, []);
+    //     return () => window.removeEventListener("resize", handleResize);
+    //   }, []);
     
  
     if(clicked ){
@@ -83,10 +83,10 @@ const NavBar = () => {
     setClicked(!clicked)
     if(!clicked){
         document.querySelector('body').style.overflow='hidden'
-        console.log(document.querySelector('.nav-menu-ul').classList.add('nav-menu-active'))
+        document.querySelector('.nav-menu-ul').classList.add('nav-menu-active')
     }else{
         document.querySelector('body').style.overflow='scroll'
-        console.log(document.querySelector('.nav-menu-ul').classList.remove('nav-menu-active'))
+        document.querySelector('.nav-menu-ul').classList.remove('nav-menu-active')
         
     }
     document.querySelector('.nav').classList.toggle('hidden-active') 
